@@ -18,7 +18,7 @@ btns.forEach(function (i) {
         evt.preventDefault()
         let product = evt.target.getAttribute("value");
         let price = evt.target.getAttribute("data-price");
-        let id = Date.now()
+        let id = evt.target.getAttribute("id")
         // let id = Math.ceil(Math.random() * 1000000)
         console.log("you added these items to the cart")
         addProducts(id, product, price)
@@ -53,7 +53,9 @@ function addProducts(id, product, price){
         productsData = JSON.parse(localStorage.getItem('products'));
     }
     productsData.push({id: id, product: product, price: price})
-    localStorage.setItem('products', JSON.stringify(productsData));
+    //saves products to local storage
+    // localStorage.setItem('products', JSON.stringify(productsData));
+    saveProducts()
 }
 
 const saveProducts = () => {
