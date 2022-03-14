@@ -1,18 +1,12 @@
-# Assessment 3: HTML/CSS/JS and SQL
-- **E-commerce Business**
+# HTML/CSS/JS and SQL
+- **E-commerce Business challenge from Code Platoon**
 
-## Requirements
-- This assessment must be completed using raw SQL on your back-end.
-- You may use either SQLite3 or PostgreSQL for your database.
-- This assessment must be completed using HTML, CSS, Bootstrap, and vanilla JS on your front-end.
+## Tech Used
+- Completed e-commerce site using HTML, CSS, Bootstrap, and vanilla JS
+- Used SQLite3 to create unrelated database to make raw SQL queries.
 
-## Challenge
-E-commerce business continues to grow in our digital age. For this challenge, we want you to develop two disconnected components of a full-stack application for an e-commerce company:
-- A back-end database
-- A front-end HTML site
-
-### Part I: Back-end Database
-Your database should be designed to store customer, product, category, and order information. We are going to ask you to complete the following three items:
+### Back-end Database
+My database was designed to store customer, product, category, and order information. 
 - database/schema.sql:
   - SQL containing the schema design for your database (tables and relationships)
 - database/seeds.sql:
@@ -25,23 +19,22 @@ Your database should be designed to store customer, product, category, and order
   4. Retrieve the product names and prices of all products ordered by the customer with first name "Bugs" and last name "Bunny"
 
 ### Part II: Front-End Website
-Your e-commerce website should be structured using HTML, designed using CSS/Bootstrap, and made functional via vanilla JavaScript. This website should feature multiple pages, which should include:
+My e-commerce website was structured using HTML, designed using CSS/Bootstrap, and made functional via vanilla JavaScript. This website features multiple pages, including:
 - **Home page** (index.html)
-  - This page should show just a basic intro and other common basic home page content
+  - This page shows a basic intro and other common basic home page content
 - **Category pages**
-  - There should be a separate page for each of the various product categories (e.g. "Home", "Kitchen", "Bed & Bath", "Office", etc...)
+  - A separate page for each of the various product categories (e.g. "Decor", "Kitchen", "Bed", & "Bath")
   - These pages should show various (at least 3 per category) products with images, names, and prices. 
     - NOTE: You can hard code these products for each page. You do not need to make it dynamic (i.e. do not need to use JavaScript to present product information) 
-  - These pages should allow users to add products to their virtual shopping cart
+  - These pages allow users to add products to their virtual shopping cart
 - **Shopping Cart page**
-  - This page should show all of the items that were added to the user's shopping cart
+  - This page shows all of the items that were added to the user's shopping cart using local storage
 
-Additionally, your site should:
-  - Include appropriate site navigation between all pages
-  - Include some basic styling using CSS
-    - BONUS: Include some Bootstrap components (other than Button)
+Additionally, my site includes:
+  - Site navigation between all pages
+  - Basic styling using CSS
+    - Bootstrap navbar component
   - Implement shopping cart functionality using JavaScript and persist data using your browser's localStorage object.
-    - NOTE: You do not need to worry about showing item quantities, removing items, or anything else really, other than just displaying items that were added to the cart
-    - BONUS: Include aggregated quantities and total price of shopping cart items
-  
-All website files should be placed within the "website/" folder.
+    - Aggregates total price of all items in shopping cart
+    - NOTE: functionality I would like to add in the future is showing item quantities, removing items from cart, etc.
+
