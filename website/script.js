@@ -4,7 +4,7 @@
 //DOM variables
 const btns = document.querySelectorAll(".add-to-cart");
 const cartList = document.getElementById("cart-list")
-let total = document.querySelector(".total")
+
 
 const productsKey = "products"
 let productsData = []
@@ -21,41 +21,59 @@ btns.forEach(function (i) {
         let id = evt.target.getAttribute("id")
         // let id = Math.ceil(Math.random() * 1000000)
         console.log("you added these items to the cart")
+        
         addProducts(id, product, price)
-        // saveProducts()
+        saveProducts()
     });
 });
 
+//load list of products in cart
+//need to figure out quantities and total
 const loadProducts = () => {
     products = JSON.parse(localStorage.getItem(productsKey))
     if (products == null) {
         products = []
     }
+    console.log(products)
     //clear out list and rewrite each time 
     cartList.innerHTML = ""
+    let prices = []
     products.forEach(product => {
-        addProducts(product.product)
+        addToCartList(product)
+        prices.push(product.price)
     })
+
+    sumTotal(prices)
 }
 
-// const addProducts = (product) => {
-//     if (product) {
-//         let li = document.createElement('li');
+const addToCartList = (product) => {
+    if (product.product !== '') {
+        let li = document.createElement('li');
+        li.innerText = product.product;
+        cartList.appendChild(li);
+    }
+}
+
+const sumTotal = (prices) => {
+    let sum = 0
+    for (let i = 0; i < prices.length; i++) {
+        parsePrice = parseFloat(prices[i])
+        sum += parsePrice;
+    }
+    sum = sum.toFixed(2);
+
+    let total = document.querySelector(".total");
+    total.innerText = `Total: $${sum}`
     
-//         li.innerText = product
-//         cartList.appendChild(li);
-//     }
-// }
+}
 
 function addProducts(id, product, price){
    
     if(localStorage.getItem('products')){
         productsData = JSON.parse(localStorage.getItem('products'));
-    }
+    };
     productsData.push({id: id, product: product, price: price})
-    //saves products to local storage
-    // localStorage.setItem('products', JSON.stringify(productsData));
-    saveProducts()
+    saveProducts();
 }
 
 const saveProducts = () => {

@@ -99,6 +99,11 @@ h2 {
 .add-to-cart {background-color: #5d737e} 
 .add-to-cart:hover {background-color: cornflowerblue;}
 
-.cart-container{
-    padding: 20px;
+#cart-container{
+    padding: 30px;
+    text-align: right;
+}
+
+#cart-list {
+    list-style-type: none;
 }
