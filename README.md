@@ -36,5 +36,5 @@ Additionally, my site includes:
     - Bootstrap navbar component
   - Implement shopping cart functionality using JavaScript and persist data using your browser's localStorage object.
     - Aggregates total price of all items in shopping cart
-    - NOTE: functionality I would like to add in the future is showing item quantities, removing items from cart, etc.
+    - NOTE: functionality I would like to add in the future is notification that item was added successfully, showing item quantities, removing items from cart, etc.
 
